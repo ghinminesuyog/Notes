@@ -21,6 +21,11 @@ class NewNoteScreen: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Dismiss keyboard on touch elsewhere:
+        let tapToDismissKeyboard = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+        view.addGestureRecognizer(tapToDismissKeyboard)
+        
 
         dateLabel.text = displayDateInMyFormat(theDate: Date())
         textTextView.text = ""

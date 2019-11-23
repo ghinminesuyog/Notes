@@ -26,6 +26,10 @@ class NotesDetailsScreen: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        Tap gesture to dismiss keyboard when clicked elsewhere:
+        let tapToDismissKeyboard = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+        self.view.addGestureRecognizer(tapToDismissKeyboard)
+        
         dateLabel.text = displayDateInMyFormat(theDate:(noteToBeEdited?.noteTimeStamp)!)
         noteTitleTextField.text = noteToBeEdited?.noteTitle
         noteTextView.text = noteToBeEdited?.noteText
@@ -40,6 +44,7 @@ class NotesDetailsScreen: UIViewController, UITextFieldDelegate {
         self.navigationItem.leftBarButtonItem = leftBarButtonForCancel
         
         let rightBarButtonForSave = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveNote))
+        
         self.navigationItem.rightBarButtonItem = rightBarButtonForSave
         
     }
