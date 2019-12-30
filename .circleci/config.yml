@@ -16,7 +16,7 @@ jobs:
       # Install CocoaPods
       - run:
           name: Install CocoaPods
-          command: pod update
+          command: sudo gem install cocoapods
 
       # Build the app and run tests
       - run:
