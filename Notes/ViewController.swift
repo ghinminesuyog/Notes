@@ -17,7 +17,15 @@ class ViewController: UIViewController {
     
     //The outlet for the table:
     @IBOutlet weak var notesTable: UITableView!
-   
+    @IBOutlet weak var addButton: UIButton!
+    
+    @IBAction func addNewNote(_ sender: Any) {
+        let sbObj = UIStoryboard(name: "Main", bundle: nil)
+             let vcObj = sbObj.instantiateViewController(identifier: "NewNoteScreenSB")
+             navigationController?.pushViewController(vcObj, animated: true)
+         
+    }
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -28,12 +36,10 @@ class ViewController: UIViewController {
         //The title of nav bar:
         self.navigationItem.title = "Notes"
         
-        //The right bar button to navigate to NewNoteScreen:
-        let rightBarButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addANewNote))
-        self.navigationItem.rightBarButtonItem = rightBarButton
-        
-        //The grayish colour for bg of the table:
-        notesTable.backgroundColor = UIColor(red: 240/255, green: 241/255, blue: 241/255, alpha: 1)
+        //Floating circular button to add new note:
+        addButton.layer.cornerRadius = addButton.frame.width/2
+        addButton.backgroundColor = UIColor.systemBlue
+        self.view.bringSubviewToFront(addButton)
 }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -90,13 +96,6 @@ class ViewController: UIViewController {
         {
             print("Failed to display data")
         }
-    }
-
-    //The objective C function that navigates to NewNoteScreen:
-    @objc func addANewNote(){
-        let sbObj = UIStoryboard(name: "Main", bundle: nil)
-        let vcObj = sbObj.instantiateViewController(identifier: "NewNoteScreenSB")
-        navigationController?.pushViewController(vcObj, animated: true)
     }
 
     func displayDateInMyFormat(theDate:Date) -> String{
@@ -163,7 +162,7 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
             let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
             alertController.addAction(cancelAction)
             
-            let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: {(action) in
+            let deleteAction = UIAlertAction(title: nil, style: .destructive, handler: {(action) in
                
                 print(self.notesArray[indexPath.row].noteId)
                 self.delete(noteID: self.notesArray[indexPath.row].noteId)
