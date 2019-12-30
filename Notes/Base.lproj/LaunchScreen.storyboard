@@ -15,15 +15,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NOTES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4B-oO-ew9">
-                                <rect key="frame" x="20" y="397" width="374" height="103"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="40"/>
-                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NOTES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4B-oO-ew9">
+                                <rect key="frame" x="20" y="200" width="374" height="103"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="103" id="mwe-eK-Dga"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="40"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stickies.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="brr-nT-Y4Q">
+                                <rect key="frame" x="0.0" y="358" width="414" height="538"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="brr-nT-Y4Q" secondAttribute="trailing" id="7KH-YY-z01"/>
+                            <constraint firstItem="I4B-oO-ew9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Bwl-hk-7gO"/>
+                            <constraint firstItem="brr-nT-Y4Q" firstAttribute="top" secondItem="I4B-oO-ew9" secondAttribute="bottom" constant="55" id="KJV-Wk-BH7"/>
+                            <constraint firstItem="brr-nT-Y4Q" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="34" id="UpY-vr-jBk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="I4B-oO-ew9" secondAttribute="trailing" constant="20" id="bXo-kL-BEJ"/>
+                            <constraint firstItem="brr-nT-Y4Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kjy-Z8-pSD"/>
+                            <constraint firstItem="I4B-oO-ew9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="156" id="ozc-2k-0gg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -32,4 +46,7 @@
             <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="stickies.jpeg" width="280" height="180"/>
+    </resources>
 </document>

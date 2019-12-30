@@ -86,6 +86,9 @@ class NewNoteScreen: UIViewController, UITextFieldDelegate {
     }
     
     @objc func cancelButton(){
+        if titleTextField.text == "" && textTextView.text == ""{
+            self.navigationController?.popViewController(animated: true)
+        }else{
         let alertController = UIAlertController(title: "Changes will be discarded", message: nil, preferredStyle: .alert)
         
            let okAction = UIAlertAction(title: "OK", style: .destructive, handler: {(action:UIAlertAction) in
@@ -97,7 +100,7 @@ class NewNoteScreen: UIViewController, UITextFieldDelegate {
            alertController.addAction(cancelAction)
         
            present(alertController,animated: true,completion: nil)
-            
+        }
     }
     
     

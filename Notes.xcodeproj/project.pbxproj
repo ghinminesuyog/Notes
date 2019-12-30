@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9727150C235097E400AE51B6 /* NewNoteScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9727150B235097E400AE51B6 /* NewNoteScreen.swift */; };
+		972F1BC323B689E9006CD48B /* notesBG.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 972F1BC223B689E9006CD48B /* notesBG.jpeg */; };
+		972F1BC523B68AE6006CD48B /* stickies.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 972F1BC423B68AE6006CD48B /* stickies.jpeg */; };
 		97D8BC7F234F43D100643CB1 /* Add.png in Resources */ = {isa = PBXBuildFile; fileRef = 97D8BC7E234F43D100643CB1 /* Add.png */; };
 		97D8BC82234F4E1500643CB1 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 97D8BC80234F4E1500643CB1 /* Model.xcdatamodeld */; };
 		97FD44A7234E45360055EB99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FD44A6234E45360055EB99 /* AppDelegate.swift */; };
@@ -27,6 +29,8 @@
 		1979553CBFEDBF6F18C72C75 /* Pods-Notes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Notes.debug.xcconfig"; path = "Target Support Files/Pods-Notes/Pods-Notes.debug.xcconfig"; sourceTree = "<group>"; };
 		867F81F716961D654DC35BF7 /* Pods-Notes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Notes.release.xcconfig"; path = "Target Support Files/Pods-Notes/Pods-Notes.release.xcconfig"; sourceTree = "<group>"; };
 		9727150B235097E400AE51B6 /* NewNoteScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNoteScreen.swift; sourceTree = "<group>"; };
+		972F1BC223B689E9006CD48B /* notesBG.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = notesBG.jpeg; sourceTree = "<group>"; };
+		972F1BC423B68AE6006CD48B /* stickies.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stickies.jpeg; sourceTree = "<group>"; };
 		97D8BC7E234F43D100643CB1 /* Add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Add.png; sourceTree = "<group>"; };
 		97D8BC81234F4E1500643CB1 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		97FD44A3234E45360055EB99 /* Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,7 +66,6 @@
 				1979553CBFEDBF6F18C72C75 /* Pods-Notes.debug.xcconfig */,
 				867F81F716961D654DC35BF7 /* Pods-Notes.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -98,6 +101,8 @@
 				97FD44AC234E45360055EB99 /* Main.storyboard */,
 				97FD44AF234E45370055EB99 /* Assets.xcassets */,
 				97FD44B1234E45370055EB99 /* LaunchScreen.storyboard */,
+				972F1BC223B689E9006CD48B /* notesBG.jpeg */,
+				972F1BC423B68AE6006CD48B /* stickies.jpeg */,
 				97FD44B4234E45370055EB99 /* Info.plist */,
 				97D8BC7E234F43D100643CB1 /* Add.png */,
 				97D8BC80234F4E1500643CB1 /* Model.xcdatamodeld */,
@@ -172,10 +177,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				972F1BC523B68AE6006CD48B /* stickies.jpeg in Resources */,
 				97FD44B3234E45370055EB99 /* LaunchScreen.storyboard in Resources */,
 				97D8BC7F234F43D100643CB1 /* Add.png in Resources */,
 				97FD44B0234E45370055EB99 /* Assets.xcassets in Resources */,
 				97FD44AE234E45360055EB99 /* Main.storyboard in Resources */,
+				972F1BC323B689E9006CD48B /* notesBG.jpeg in Resources */,
 				97FD44BD234E458F0055EB99 /* NotesCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

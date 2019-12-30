@@ -123,16 +123,14 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! NotesCell
        
         //Text in each label of the cell:
+        if notesArray[indexPath.row].noteTitle == ""{
+            cell.noteTitle.text = notesArray[indexPath.row].noteText
+        }else{
         cell.noteTitle.text = notesArray[indexPath.row].noteTitle
+        }
         cell.noteText.text = notesArray[indexPath.row].noteText
         cell.dateLabel.text = displayDateInMyFormat(theDate: notesArray[indexPath.row].noteTimeStamp)
   
-        //Properties for the layer of the cell:
-        cell.layer.borderWidth = 3
-        cell.layer.borderColor = UIColor(red: 240/255, green: 241/255, blue: 241/255, alpha: 1).cgColor
-        cell.layer.cornerRadius = 15
-        cell.clipsToBounds = true
-        
         //Dynamic height for the cells:
         tableView.estimatedRowHeight = 400
         tableView.rowHeight = UITableView.automaticDimension
@@ -230,7 +228,11 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
         }
         catch
         {
-            print("Values could not be deleted")
+            
+            let alertController = UIAlertController(title: "Oops!", message: "Your note could not be deleted. This should not have happened. Please try again.", preferredStyle: .actionSheet)
+            let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(okAction)
+            present(alertController, animated: true, completion: nil)
         }
     }
 }

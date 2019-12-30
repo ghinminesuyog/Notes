@@ -40,9 +40,9 @@ class NotesDetailsScreen: UIViewController, UITextFieldDelegate {
         noteTextView.layer.borderColor = UIColor.lightGray.cgColor
         noteTextView.layer.cornerRadius = 8
         
-        let leftBarButtonForCancel = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelNote))
-        self.navigationItem.leftBarButtonItem = leftBarButtonForCancel
-        
+//        let leftBarButtonForCancel = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelNote))
+//        self.navigationItem.leftBarButtonItem = leftBarButtonForCancel
+//        
         let rightBarButtonForSave = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveNote))
         
         self.navigationItem.rightBarButtonItem = rightBarButtonForSave
@@ -89,6 +89,7 @@ class NotesDetailsScreen: UIViewController, UITextFieldDelegate {
     }
     
     @objc func cancelNote(){
+        
         let alertController = UIAlertController(title: "Changes will be discarded", message: nil, preferredStyle: .alert)
         
         let okAction = UIAlertAction(title: "OK", style: .destructive, handler: {(action:UIAlertAction) in
