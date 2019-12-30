@@ -162,7 +162,7 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
             let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
             alertController.addAction(cancelAction)
             
-            let deleteAction = UIAlertAction(title: nil, style: .destructive, handler: {(action) in
+            let deleteAction = UIAlertAction(title: "Confirm", style: .destructive, handler: {(action) in
                
                 print(self.notesArray[indexPath.row].noteId)
                 self.delete(noteID: self.notesArray[indexPath.row].noteId)
