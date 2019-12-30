@@ -37,9 +37,6 @@ class NewNoteScreen: UIViewController, UITextFieldDelegate {
         textTextView.layer.borderColor = UIColor.lightGray.cgColor
         textTextView.layer.cornerRadius = 8
         
-        let leftBarButtonForCancel = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelButton))
-        self.navigationItem.leftBarButtonItem = leftBarButtonForCancel
-        
         let rightBarButtonForSave = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(savebutton))
         self.navigationItem.rightBarButtonItem = rightBarButtonForSave
         
@@ -84,26 +81,6 @@ class NewNoteScreen: UIViewController, UITextFieldDelegate {
             self.navigationController?.popToRootViewController(animated: true)
         
     }
-    
-    @objc func cancelButton(){
-        if titleTextField.text == "" && textTextView.text == ""{
-            self.navigationController?.popViewController(animated: true)
-        }else{
-        let alertController = UIAlertController(title: "Changes will be discarded", message: nil, preferredStyle: .alert)
-        
-           let okAction = UIAlertAction(title: "OK", style: .destructive, handler: {(action:UIAlertAction) in
-               self.navigationController?.popToRootViewController(animated: true)
-           })
-           alertController.addAction(okAction)
-        
-           let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-           alertController.addAction(cancelAction)
-        
-           present(alertController,animated: true,completion: nil)
-        }
-    }
-    
-    
     
     func displayDateInMyFormat(theDate:Date) -> String{
         //The formatter:
