@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NUM-uB-7rY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NUM-uB-7rY">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -35,9 +35,10 @@
                                 <rect key="frame" x="340" y="803" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="93Z-X4-qLx"/>
+                                    <constraint firstAttribute="width" constant="50" id="pee-jJ-Bmx"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <state key="normal" title="+">
+                                <state key="normal" image="plus" catalog="system">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -57,7 +58,6 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="POI-iV-kn2" secondAttribute="trailing" constant="24" id="2Hm-Q7-pXH"/>
                             <constraint firstItem="gvR-Da-QEc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="KHW-2l-nLY"/>
-                            <constraint firstItem="POI-iV-kn2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="340" id="PGC-Ba-7PT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gvR-Da-QEc" secondAttribute="bottom" id="Qii-vR-cdc"/>
                             <constraint firstItem="gvR-Da-QEc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="d68-1l-Yr0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="POI-iV-kn2" secondAttribute="bottom" constant="9" id="dEJ-tt-DpJ"/>
@@ -228,4 +228,7 @@
             <point key="canvasLocation" x="1605.7971014492755" y="126.5625"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="plus" catalog="system" width="64" height="56"/>
+    </resources>
 </document>

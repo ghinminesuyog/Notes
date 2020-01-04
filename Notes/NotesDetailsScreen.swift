@@ -34,7 +34,7 @@ class NotesDetailsScreen: UIViewController, UITextFieldDelegate {
         noteTitleTextField.text = noteToBeEdited?.noteTitle
         noteTextView.text = noteToBeEdited?.noteText
         
-        self.view.backgroundColor = UIColor(red: 240/255, green: 241/255, blue: 241/255, alpha: 1)
+//        self.view.backgroundColor = UIColor(red: 240/255, green: 241/255, blue: 241/255, alpha: 1)
         
         noteTextView.layer.borderWidth = 0.5
         noteTextView.layer.borderColor = UIColor.lightGray.cgColor
