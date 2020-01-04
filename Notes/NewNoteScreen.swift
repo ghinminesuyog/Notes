@@ -31,8 +31,6 @@ class NewNoteScreen: UIViewController, UITextFieldDelegate {
         textTextView.text = ""
         titleTextField.placeholder = "Enter title"
 
-        self.view.backgroundColor = UIColor(red: 240/255, green: 241/255, blue: 241/255, alpha: 1)
-
         textTextView.layer.borderWidth = 0.5
         textTextView.layer.borderColor = UIColor.lightGray.cgColor
         textTextView.layer.cornerRadius = 8

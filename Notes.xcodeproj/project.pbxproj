@@ -31,6 +31,7 @@
 		9727150B235097E400AE51B6 /* NewNoteScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNoteScreen.swift; sourceTree = "<group>"; };
 		972F1BC223B689E9006CD48B /* notesBG.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = notesBG.jpeg; sourceTree = "<group>"; };
 		972F1BC423B68AE6006CD48B /* stickies.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stickies.jpeg; sourceTree = "<group>"; };
+		979F62F723BA0682004587D2 /* Notes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Notes.entitlements; sourceTree = "<group>"; };
 		97D8BC7E234F43D100643CB1 /* Add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Add.png; sourceTree = "<group>"; };
 		97D8BC81234F4E1500643CB1 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		97FD44A3234E45360055EB99 /* Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +91,7 @@
 		97FD44A5234E45360055EB99 /* Notes */ = {
 			isa = PBXGroup;
 			children = (
+				979F62F723BA0682004587D2 /* Notes.entitlements */,
 				97FD44A6234E45360055EB99 /* AppDelegate.swift */,
 				97FD44A8234E45360055EB99 /* SceneDelegate.swift */,
 				97FD44AA234E45360055EB99 /* ViewController.swift */,
@@ -371,6 +373,7 @@
 			baseConfigurationReference = 1979553CBFEDBF6F18C72C75 /* Pods-Notes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Notes/Notes.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G38GF873P4;
 				INFOPLIST_FILE = Notes/Info.plist;
@@ -390,6 +393,7 @@
 			baseConfigurationReference = 867F81F716961D654DC35BF7 /* Pods-Notes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Notes/Notes.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G38GF873P4;
 				INFOPLIST_FILE = Notes/Info.plist;
